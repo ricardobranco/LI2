@@ -1,9 +1,10 @@
-CFLAGS=-Wall -Wextra -ansi -pedantic -O2
+CFLAGS=-Wall -Wextra -pedantic -ansi -O2
 OBJS=$(patsubst %.c,%.o,$(wildcard *.c))
 LIBS=-lreadline
+NAME=main
 
-main: $(OBJS)
-	$(CC) $(CFLAGS) -o main $(OBJS) $(LIBS)
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIBS)
 
-limpar:
+clean:
 	rm main *.o
