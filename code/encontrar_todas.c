@@ -28,7 +28,7 @@ int main() {
 
 
 	for(i = 0; i<nl; i++){
-		readline=rl_gets("Linha> ")
+		readline=rl_gets("Linha> ");
 
 	}
 
