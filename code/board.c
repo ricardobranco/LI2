@@ -23,3 +23,31 @@ void print(BOARD board){
 	for(i = 0; i < board->nl; i++)
 		printf("%s\n",board->board[i]);
 }
+
+BOARD board_load(char file[]){
+	char *readline = NULL;
+	char* row = NULL;
+	int nl,nc,i;
+	BOARD board = NULL;
+	FILE* f = NULL;
+
+	readline = (char*) malloc(sizeof(char)*50);
+	row = (char*) malloc(sizeof(char)*nc);
+	f = fopen(file, "rt");
+
+	fgets(readline,50,f);
+	sscanf(readline,"%d %d",&nl, &nc);
+
+	board = board_init(nl,nc);
+
+	readline = (char*) malloc(sizeof(char)*nc+2);
+	i=0;
+
+	while (fgets(readline,sizeof(readline)-1,f) && i < nl){
+		cad_mover(readline,row,nc+1);
+		add_row(row,i,board);
+		i++;
+	}
+	fclose(f);
+	return board;
+}

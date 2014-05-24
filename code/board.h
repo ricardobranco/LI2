@@ -11,3 +11,4 @@ typedef struct struct_board{
 BOARD board_init(int nl, int nc);
 int add_row(char* row,int pos,BOARD board);
 void print(BOARD board);
+BOARD board_load(char file[]);

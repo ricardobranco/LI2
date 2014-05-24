@@ -55,6 +55,23 @@ int palavra_existe(DICIONARIO dic, char palavra[]){
 	return (flag && trie_node->isValue)? 1 : 0;
 }
 
+int palavra_prefix(DICIONARIO dic, char palavra[]){
+	int len = cad_tamanho(palavra);
+	int index;
+	int i,flag;
+
+	TrieNode trie_node = dic->root;
+
+	for(i=0,flag=1; i < len && flag;i++){
+		index = toupper(palavra[i])-'A';
+		if(!trie_node->children[index])
+			flag = 0;
+		else
+			trie_node = trie_node->children[index];
+	}
+	return flag? 1 : 0;
+}
+
 void dicionario_load(DICIONARIO dic, char file[]){
 	char readline[128];
 	char word[50];
@@ -64,7 +81,10 @@ void dicionario_load(DICIONARIO dic, char file[]){
 
 	while (fgets(readline,sizeof readline,f))
     {
-		sscanf (readline,"%[^\n]\n",word);
+		sscanf (readline,"%s\n",word);
 		add_palavra(dic,word);
 	}
+	fclose(f);
 }
+
+

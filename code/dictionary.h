@@ -19,4 +19,6 @@ typedef struct struct_dictionary{
 DICIONARIO dicionario_init();
 void add_palavra(DICIONARIO dic, char palavra[]);
 int palavra_existe(DICIONARIO dic, char palavra[]);
+int palavra_prefix(DICIONARIO dic, char palavra[]);
 void dicionario_load(DICIONARIO dic, char file[]);
+void dicionario_print(DICIONARIO dic);

@@ -181,13 +181,8 @@ int cad_nenhum_dos(char s1[], char s2[]){
 }
 
 int cad_copiar(char s1[], char s2[]){
-	int len = cad_tamanho(s1);
-	int i;
-
-	for ( i = 0; i <= len; ++i){
-		s2[i] = s1[i];
-	}
-	return i;
+	while ((*s2++ = *s1++));
+	return 1;
 }
 
 int cad_colar(char s1[], char s2[]){
