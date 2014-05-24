@@ -25,26 +25,24 @@ void print(BOARD board){
 }
 
 BOARD board_load(char file[]){
-	char *readline = NULL;
+	char readline[3000];
 	char* row = NULL;
 	int nl,nc,i;
 	BOARD board = NULL;
 	FILE* f = NULL;
 
-	readline = (char*) malloc(sizeof(char)*50);
-	row = (char*) malloc(sizeof(char)*nc);
 	f = fopen(file, "rt");
 
-	fgets(readline,50,f);
+	fgets(readline,sizeof(readline)-2,f);
 	sscanf(readline,"%d %d",&nl, &nc);
 
 	board = board_init(nl,nc);
+	row = (char*) malloc(sizeof(char)*nc);
 
-	readline = (char*) malloc(sizeof(char)*nc+2);
 	i=0;
 
-	while (fgets(readline,sizeof(readline)-1,f) && i < nl){
-		cad_mover(readline,row,nc+1);
+	while (fgets(readline,sizeof(readline)-2,f) && i < nl){
+		cad_mover(readline,row,nc);
 		add_row(row,i,board);
 		i++;
 	}
