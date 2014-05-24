@@ -7,8 +7,6 @@
 int main() {
 
 	int nl,nc,npares;
-	int flag = 1;
-	int flag2 = 1;
 	int i,j;
 	int cindex, lindex;
 
@@ -30,7 +28,7 @@ int main() {
 
 
 	readline=rl_gets("Numero de Pares> ");
-	sscanf(readline,"%d %s",&npares);
+	sscanf(readline,"%d",&npares);
 
 	finalWord = (char*) malloc(sizeof(char)*npares+1);
 
