@@ -29,4 +29,4 @@ tdic.o: tdic.c
 	$(CC) $(CFLAGS) -c tdic.c $(LIBS)
 
 clean:
-	rm coords tproc *.o
+	rm coords tproc tdic encontrar_todas *.o
