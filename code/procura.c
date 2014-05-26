@@ -38,10 +38,10 @@ int main() {
 		}
 		finalWord[j]='\0';
 		if(palavra_existe(dic,finalWord)){
-			printf("%s SUCESSO\n",finalWord);
+			printf("SUCESSO\n",finalWord);
 		}
 		else{
-			printf("%s INSUCESSO\n",finalWord);
+			printf("INSUCESSO\n",finalWord);
 		}
 	}
 	return 0;
