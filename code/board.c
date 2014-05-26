@@ -37,12 +37,12 @@ BOARD board_load(char file[]){
 	sscanf(readline,"%d %d",&nl, &nc);
 
 	board = board_init(nl,nc);
-	row = (char*) malloc(sizeof(char)*nc);
+	row = (char*) malloc(sizeof(char)*nc+1);
 
 	i=0;
 
 	while (fgets(readline,sizeof(readline)-2,f) && i < nl){
-		cad_mover(readline,row,nc);
+		cad_mover(readline,row,nc+1);
 		add_row(row,i,board);
 		i++;
 	}

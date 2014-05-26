@@ -37,12 +37,12 @@ int main() {
 	strtokRes = strtok(readline," ");
 	for(i = 0,j=0;strtokRes && i<(npares*2);i++){
 		if(i%2==1){
-			sscanf(strtokRes,"%d",&cindex);
+			cindex = atoi(strtokRes);
 			finalWord[j]=board->board[lindex-1][cindex-1];
 			j++;
 		}
 		else{
-			sscanf(strtokRes,"%d",&lindex);
+			lindex = atoi(strtokRes);
 		}
 
 		strtokRes=strtok(NULL," ");

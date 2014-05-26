@@ -2,7 +2,7 @@ CFLAGS=-g -Wall -Wextra -pedantic -ansi -O2
 OBJS=cadeias.o board.o interpretador.o dictionary.o tree.o
 LIBS=-lreadline
 
-all: coords tproc tdic encontrar_todas
+all: coords tproc tdic encontrar_todas procura
 
 encontrar_todas: encontrar_todas.o $(OBJS)
 	$(CC) $(CFLAGS) -o encontrar_todas encontrar_todas.o $(OBJS) $(LIBS)
@@ -28,5 +28,12 @@ tdic: tdic.o $(OBJS)
 tdic.o: tdic.c
 	$(CC) $(CFLAGS) -c tdic.c $(LIBS)
 
+procura: procura.o $(OBJS)
+	$(CC) $(CFLAGS) -o procura procura.o $(OBJS) $(LIBS)
+
+procura.o: procura.c
+	$(CC) $(CFLAGS) -c procura.c $(LIBS)
+
+
 clean:
-	rm coords tproc tdic encontrar_todas *.o
+	rm coords tproc tdic encontrar_todas procura *.o
