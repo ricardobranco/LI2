@@ -1,4 +1,4 @@
-CFLAGS=-g -Wall -Wextra -pedantic -ansi
+CFLAGS=-g -Wall -Wextra -pedantic -ansi -O2
 OBJS=cadeias.o board.o interpretador.o dictionary.o tree.o
 LIBS=-lreadline
 

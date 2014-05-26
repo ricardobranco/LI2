@@ -17,13 +17,11 @@ void encontrar_todas_serpente(BOARD board,DICIONARIO dic, int x, int y, TREE res
 		if(!tree_search(res,prefix))
 			tree_add_palavra(res,prefix);
 	}
-
-
-
 	xmin = x-1<0?0:x-1;
 	xmax = x+1>board->nl-1?board->nl-1:x+1;
 	ymin = y-1<0?0:y-1;
 	ymax = y+1>board->nc-1?board->nc-1:y+1;
+
 	for(i = xmin;i <= xmax;i++){
 		for(j = ymin; j <= ymax;j++){
 			newPrefix= (char*) malloc(sizeof(char)*len+2);
@@ -33,7 +31,7 @@ void encontrar_todas_serpente(BOARD board,DICIONARIO dic, int x, int y, TREE res
 			if(palavra_prefix(dic,newPrefix)){
 				encontrar_todas_serpente(board,dic,i,j,res,newPrefix);
 			}
-
+			free(newPrefix);
 		}
 	}
 }
@@ -66,6 +64,7 @@ void encontrar_todas_cavalo(BOARD board,DICIONARIO dic, int x, int y, TREE res, 
 					if(palavra_prefix(dic,newPrefix)){
 						encontrar_todas_cavalo(board,dic,i,j,res,newPrefix);
 					}
+					free(newPrefix);
 				}
 			}
 		}
@@ -75,7 +74,7 @@ void encontrar_todas_cavalo(BOARD board,DICIONARIO dic, int x, int y, TREE res, 
 
 TREE encontrar_todas(BOARD board,DICIONARIO dic, char modo[]){
 	TREE res = tree_init();
-	char* prefix = (char*) malloc(sizeof(char));
+	char* prefix = (char*) malloc(sizeof(char)+1);
 	int i,j;
 	for(i = 0; i < board->nl; i++){
 		for(j = 0; j < board->nc; j++){
@@ -87,6 +86,7 @@ TREE encontrar_todas(BOARD board,DICIONARIO dic, char modo[]){
 			}
 		}
 	}
+	free(prefix);
 	return res;
 }
 
