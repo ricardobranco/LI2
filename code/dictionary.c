@@ -89,4 +89,37 @@ void dicionario_load(DICIONARIO dic, char file[]){
 	fclose(f);
 }
 
+void dicionario_print_aux(TrieNode trie_node,char* prefix){
+	int i;
+	int len = cad_tamanho(prefix);
+	char* newPrefix;
+
+	if (trie_node->isValue)
+		printf("%s\n",prefix);
+
+	newPrefix = (char*) malloc(sizeof(char)*len+2);
+	cad_copiar(prefix,newPrefix);
+
+	for (i = 0; i < ALPHABET_SIZE; ++i){
+		newPrefix[len] = i+'A';
+		newPrefix[len+1] = '\0';
+		if(trie_node->children[i])
+			dicionario_print_aux(trie_node->children[i],newPrefix);
+	}
+	free(newPrefix);
+}
+
+void dicionario_print(DICIONARIO dic){
+	TrieNode trie_node = dic->root;
+	char* newPrefix;
+	int i;
+	newPrefix = (char*) malloc(sizeof(char)*2);
+	for (i = 0; i < ALPHABET_SIZE; ++i){
+		newPrefix[0] = i+'A';
+		newPrefix[1] = '\0';
+		if(trie_node->children[i])
+			dicionario_print_aux(trie_node->children[i],newPrefix);
+	}
+
+}
 

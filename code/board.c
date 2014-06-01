@@ -25,7 +25,7 @@ void print(BOARD board){
 }
 
 BOARD board_load(char file[]){
-	char readline[20];
+	char readline[2000];
 	char* row = NULL;
 	int nl,nc,i;
 	BOARD board = NULL;

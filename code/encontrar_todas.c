@@ -6,7 +6,7 @@
 #include "tree.h"
 #include "dictionary.h"
 
-void encontrar_todas_serpente(BOARD board,DICIONARIO dic, int x, int y, TREE res, char* prefix){
+void encontrar_todas_serpente(BOARD board,DICIONARIO dic, int x, int y, DICIONARIO res, char* prefix){
 	int xmin,xmax,ymin,ymax;
 	int i,j;
 	int len;
@@ -15,9 +15,10 @@ void encontrar_todas_serpente(BOARD board,DICIONARIO dic, int x, int y, TREE res
 	len = cad_tamanho(prefix);
 
 	if(palavra_existe(dic,prefix)){
-		if(!tree_search(res,prefix))
-			tree_add_palavra(res,prefix);
+		if(!palavra_existe(res,prefix))
+			add_palavra(res,prefix);
 	}
+
 	old = board->board[x][y];
 	board->board[x][y] = 0;
 
@@ -28,7 +29,7 @@ void encontrar_todas_serpente(BOARD board,DICIONARIO dic, int x, int y, TREE res
 
 	for(i = xmin;i <= xmax;i++){
 		for(j = ymin; j <= ymax;j++){
-			if(board->board[x][y]){
+			if(board->board[i][j]){
 				newPrefix= (char*) malloc(sizeof(char)*len+2);
 				cad_copiar(prefix,newPrefix);
 				newPrefix[len]=board->board[i][j];
@@ -45,7 +46,7 @@ void encontrar_todas_serpente(BOARD board,DICIONARIO dic, int x, int y, TREE res
 }
 
 
-void encontrar_todas_cavalo(BOARD board,DICIONARIO dic, int x, int y, TREE res, char* prefix){
+void encontrar_todas_cavalo(BOARD board,DICIONARIO dic, int x, int y, DICIONARIO res, char* prefix){
 	int xmin,xmax,ymin,ymax;
 	int i,j;
 	int len;
@@ -55,8 +56,8 @@ void encontrar_todas_cavalo(BOARD board,DICIONARIO dic, int x, int y, TREE res, 
 	len = cad_tamanho(prefix);
 
 	if(palavra_existe(dic,prefix)){
-		if(!tree_search(res,prefix))
-			tree_add_palavra(res,prefix);
+		if(!palavra_existe(res,prefix))
+			add_palavra(res,prefix);
 	}
 
 	old = board->board[x][y];
@@ -70,7 +71,7 @@ void encontrar_todas_cavalo(BOARD board,DICIONARIO dic, int x, int y, TREE res, 
 		for(j = ymin; j <= ymax;j++){
 			if(i >= 0 && i < board->nl && j >= 0 && j < board->nc && i != x && j != y){
 				if(((i == xmin || i == xmax) && ( j == y-1 || j == y+1))||((i == x-1 || i == x+1) && ( j == ymin || j == ymax))){
-					if(board->board[x][y]){
+					if(board->board[i][j]){
 						newPrefix= (char*) malloc(sizeof(char)*len+2);
 						cad_copiar(prefix,newPrefix);
 						newPrefix[len]=board->board[i][j];
@@ -86,8 +87,8 @@ void encontrar_todas_cavalo(BOARD board,DICIONARIO dic, int x, int y, TREE res, 
 }
 
 
-TREE encontrar_todas(BOARD board,DICIONARIO dic, char modo[]){
-	TREE res = tree_init();
+DICIONARIO encontrar_todas(BOARD board,DICIONARIO dic, char modo[]){
+	DICIONARIO res = dicionario_init();
 	char* prefix = (char*) malloc(sizeof(char)+1);
 	int i,j;
 	for(i = 0; i < board->nl; i++){
@@ -109,15 +110,15 @@ int main() {
 	char* readline = NULL;
 	char* modo = NULL;
 	BOARD board = NULL;
-	TREE res;
-
+	DICIONARIO res;
 	DICIONARIO dic = dicionario_init();
+
 	dicionario_load(dic,"dicio.txt");
 
 	modo=rl_gets("Modo> ");
 	readline= rl_gets("Sopa de Letras> ");
 	board = board_load(readline);
 	res=encontrar_todas(board,dic,modo);
-	tree_print(res);
+	dicionario_print(res);
 	return 0;
 }
