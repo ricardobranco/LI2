@@ -18,6 +18,7 @@ TrieNode getNode()
 DICIONARIO dicionario_init(){
 	DICIONARIO dic = (DICIONARIO) malloc(sizeof(struct struct_dictionary));
 	dic->root = getNode();
+	dic->size = 0;
 	return dic;
 }
 
@@ -35,6 +36,7 @@ void add_palavra(DICIONARIO dic, char palavra[]){
 		trie_node = trie_node->children[index];
 
 	}
+	dic->size++;
 	trie_node->isValue = 1;
 }
 

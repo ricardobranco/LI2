@@ -14,6 +14,7 @@ typedef struct trie_node{
 
 typedef struct struct_dictionary{
 	TrieNode root;
+	int size;
 }*DICIONARIO;
 
 DICIONARIO dicionario_init();

@@ -11,12 +11,16 @@ void encontrar_todas_serpente(BOARD board,DICIONARIO dic, int x, int y, TREE res
 	int i,j;
 	int len;
 	char *newPrefix = NULL;
+	char old;
 	len = cad_tamanho(prefix);
 
 	if(palavra_existe(dic,prefix)){
 		if(!tree_search(res,prefix))
 			tree_add_palavra(res,prefix);
 	}
+	old = board->board[x][y];
+	board->board[x][y] = 0;
+
 	xmin = x-1<0?0:x-1;
 	xmax = x+1>board->nl-1?board->nl-1:x+1;
 	ymin = y-1<0?0:y-1;
@@ -24,16 +28,20 @@ void encontrar_todas_serpente(BOARD board,DICIONARIO dic, int x, int y, TREE res
 
 	for(i = xmin;i <= xmax;i++){
 		for(j = ymin; j <= ymax;j++){
-			newPrefix= (char*) malloc(sizeof(char)*len+2);
-			cad_copiar(prefix,newPrefix);
-			newPrefix[len]=board->board[i][j];
-			newPrefix[len+1]='\0';
-			if(palavra_prefix(dic,newPrefix)){
-				encontrar_todas_serpente(board,dic,i,j,res,newPrefix);
+			if(board->board[x][y]){
+				newPrefix= (char*) malloc(sizeof(char)*len+2);
+				cad_copiar(prefix,newPrefix);
+				newPrefix[len]=board->board[i][j];
+				newPrefix[len+1]='\0';
+
+				if(palavra_prefix(dic,newPrefix))
+					encontrar_todas_serpente(board,dic,i,j,res,newPrefix);
+
+				free(newPrefix);
 			}
-			free(newPrefix);
 		}
 	}
+	board->board[x][y] = old;
 }
 
 
@@ -42,12 +50,17 @@ void encontrar_todas_cavalo(BOARD board,DICIONARIO dic, int x, int y, TREE res, 
 	int i,j;
 	int len;
 	char *newPrefix = NULL;
+	char old;
+
 	len = cad_tamanho(prefix);
 
 	if(palavra_existe(dic,prefix)){
 		if(!tree_search(res,prefix))
 			tree_add_palavra(res,prefix);
 	}
+
+	old = board->board[x][y];
+	board->board[x][y] = 0;
 
 	xmin = x-2;
 	xmax = x+2;
@@ -57,14 +70,15 @@ void encontrar_todas_cavalo(BOARD board,DICIONARIO dic, int x, int y, TREE res, 
 		for(j = ymin; j <= ymax;j++){
 			if(i >= 0 && i < board->nl && j >= 0 && j < board->nc && i != x && j != y){
 				if(((i == xmin || i == xmax) && ( j == y-1 || j == y+1))||((i == x-1 || i == x+1) && ( j == ymin || j == ymax))){
-					newPrefix= (char*) malloc(sizeof(char)*len+2);
-					cad_copiar(prefix,newPrefix);
-					newPrefix[len]=board->board[i][j];
-					newPrefix[len+1]='\0';
-					if(palavra_prefix(dic,newPrefix)){
-						encontrar_todas_cavalo(board,dic,i,j,res,newPrefix);
+					if(board->board[x][y]){
+						newPrefix= (char*) malloc(sizeof(char)*len+2);
+						cad_copiar(prefix,newPrefix);
+						newPrefix[len]=board->board[i][j];
+						newPrefix[len+1]='\0';
+						if(palavra_prefix(dic,newPrefix))
+							encontrar_todas_cavalo(board,dic,i,j,res,newPrefix);
+						free(newPrefix);
 					}
-					free(newPrefix);
 				}
 			}
 		}

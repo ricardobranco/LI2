@@ -13,10 +13,18 @@ int main() {
 	char *strtokRes = NULL;
 
 	DICIONARIO dic = dicionario_init();
-	dicionario_load(dic,"dicio.txt");
+	DICIONARIO palavras = dicionario_init();
 
+	dicionario_load(dic,"dicio.txt");
 	readline= rl_gets("Sopa de Letras> ");
 	board = board_load(readline);
+	lindex = cindex = 0;
+
+
+
+
+
+
 
 
 	while((readline=rl_gets("Numero de Pares> "))!=NULL){
@@ -38,10 +46,10 @@ int main() {
 		}
 		finalWord[j]='\0';
 		if(palavra_existe(dic,finalWord)){
-			printf("SUCESSO\n",finalWord);
+			printf("SUCESSO\n");
 		}
 		else{
-			printf("INSUCESSO\n",finalWord);
+			printf("INSUCESSO\n");
 		}
 	}
 	return 0;

@@ -35,6 +35,7 @@ int main() {
 	readline=rl_gets("Coordenadas> ");
 
 	strtokRes = strtok(readline," ");
+	lindex = cindex = 0;
 	for(i = 0,j=0;strtokRes && i<(npares*2);i++){
 		if(i%2==1){
 			cindex = atoi(strtokRes);
