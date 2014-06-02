@@ -1,0 +1,52 @@
+\hypertarget{procurar_8c}{\section{code/procurar.c File Reference}
+\label{procurar_8c}\index{code/procurar.\+c@{code/procurar.\+c}}
+}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$curses.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}interpretador.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cadeias.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dictionary.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}jogada.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{procurar_8c_ae635dcbd40cdf9e1739f910644b830b7}{procurar\+\_\+print} (\hyperlink{board_8h_adac52f1b8c160731cd455af114c53a59}{B\+O\+A\+R\+D} board, int x, int y, \hyperlink{jogada_8h_aca72f83e52c0cdd8db2ffdd5582e6ad6}{L\+I\+S\+T\+A\+\_\+\+J\+O\+G\+A\+D\+A\+S} jogadas)
+\item 
+int \hyperlink{procurar_8c_a3307ea3d373d42a5e92acbad8dacaaad}{valida\+\_\+jogada} (\hyperlink{board_8h_adac52f1b8c160731cd455af114c53a59}{B\+O\+A\+R\+D} board, \hyperlink{dictionary_8h_ab8e3f010c57289f16b599812c175fe81}{D\+I\+C\+I\+O\+N\+A\+R\+I\+O} dic, \hyperlink{dictionary_8h_ab8e3f010c57289f16b599812c175fe81}{D\+I\+C\+I\+O\+N\+A\+R\+I\+O} palavras, \hyperlink{jogada_8h_aca72f83e52c0cdd8db2ffdd5582e6ad6}{L\+I\+S\+T\+A\+\_\+\+J\+O\+G\+A\+D\+A\+S} jogadas, char $\ast$final\+Word, int len)
+\item 
+int \hyperlink{procurar_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{procurar_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{procurar.\+c@{procurar.\+c}!main@{main}}
+\index{main@{main}!procurar.\+c@{procurar.\+c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{procurar_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+\hypertarget{procurar_8c_ae635dcbd40cdf9e1739f910644b830b7}{\index{procurar.\+c@{procurar.\+c}!procurar\+\_\+print@{procurar\+\_\+print}}
+\index{procurar\+\_\+print@{procurar\+\_\+print}!procurar.\+c@{procurar.\+c}}
+\subsubsection[{procurar\+\_\+print}]{\setlength{\rightskip}{0pt plus 5cm}int procurar\+\_\+print (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+O\+A\+R\+D}}]{board, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{{\bf L\+I\+S\+T\+A\+\_\+\+J\+O\+G\+A\+D\+A\+S}}]{jogadas}
+\end{DoxyParamCaption}
+)}}\label{procurar_8c_ae635dcbd40cdf9e1739f910644b830b7}
+\hypertarget{procurar_8c_a3307ea3d373d42a5e92acbad8dacaaad}{\index{procurar.\+c@{procurar.\+c}!valida\+\_\+jogada@{valida\+\_\+jogada}}
+\index{valida\+\_\+jogada@{valida\+\_\+jogada}!procurar.\+c@{procurar.\+c}}
+\subsubsection[{valida\+\_\+jogada}]{\setlength{\rightskip}{0pt plus 5cm}int valida\+\_\+jogada (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+O\+A\+R\+D}}]{board, }
+\item[{{\bf D\+I\+C\+I\+O\+N\+A\+R\+I\+O}}]{dic, }
+\item[{{\bf D\+I\+C\+I\+O\+N\+A\+R\+I\+O}}]{palavras, }
+\item[{{\bf L\+I\+S\+T\+A\+\_\+\+J\+O\+G\+A\+D\+A\+S}}]{jogadas, }
+\item[{char $\ast$}]{final\+Word, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}}\label{procurar_8c_a3307ea3d373d42a5e92acbad8dacaaad}

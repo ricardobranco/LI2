@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['gerar_5fsopa_2ec',['gerar_sopa.c',['../gerar__sopa_8c.html',1,'']]]
+  ['interpretador_2ec',['interpretador.c',['../interpretador_8c.html',1,'']]],
+  ['interpretador_2eh',['interpretador.h',['../interpretador_8h.html',1,'']]]
 ];

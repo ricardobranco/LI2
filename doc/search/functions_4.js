@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['encontrar_5ftodas',['encontrar_todas',['../encontrar__todas_8c.html#ae612054cc4eede3031eda33267816345',1,'encontrar_todas.c']]],
-  ['encontrar_5ftodas_5fcavalo',['encontrar_todas_cavalo',['../encontrar__todas_8c.html#a6f01b98ea8d0a12eab3bbb1462952e99',1,'encontrar_todas.c']]],
-  ['encontrar_5ftodas_5fserpente',['encontrar_todas_serpente',['../encontrar__todas_8c.html#ad4323eb53b1701d8a3dc1f3554d77997',1,'encontrar_todas.c']]]
+  ['encontrar_5ftodas',['encontrar_todas',['../encontrar__todas_8c.html#a125deee0c6126c069711b716943b7a5e',1,'encontrar_todas.c']]],
+  ['encontrar_5ftodas_5fcavalo',['encontrar_todas_cavalo',['../encontrar__todas_8c.html#a4c7056bba86cffdf9c7faf1ae164e14b',1,'encontrar_todas.c']]],
+  ['encontrar_5ftodas_5fserpente',['encontrar_todas_serpente',['../encontrar__todas_8c.html#afc6fbe856b5c6b9c2628e4500d05a017',1,'encontrar_todas.c']]]
 ];

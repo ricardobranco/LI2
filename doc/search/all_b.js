@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['right',['right',['../structstruct__tree.html#a56907acb9f48e57042d1d2f1b04773da',1,'struct_tree']]],
-  ['rl_5fgets',['rl_gets',['../interpretador_8c.html#a36e8f7fa4482ec15e12b8bcc103b260c',1,'rl_gets(char *prompt):&#160;interpretador.c'],['../interpretador_8h.html#a36e8f7fa4482ec15e12b8bcc103b260c',1,'rl_gets(char *prompt):&#160;interpretador.c']]],
-  ['root',['root',['../structstruct__dictionary.html#a06c8b67fb49a1a231098e945e62cc30b',1,'struct_dictionary']]]
+  ['palavra_5fexiste',['palavra_existe',['../dictionary_8c.html#a2bf21969fe81035b3c86dfd2a60d35c3',1,'palavra_existe(DICIONARIO dic, char palavra[]):&#160;dictionary.c'],['../dictionary_8h.html#a2bf21969fe81035b3c86dfd2a60d35c3',1,'palavra_existe(DICIONARIO dic, char palavra[]):&#160;dictionary.c']]],
+  ['palavra_5fprefix',['palavra_prefix',['../dictionary_8c.html#a0cab592a6e685ec131df8b0a13572058',1,'palavra_prefix(DICIONARIO dic, char palavra[]):&#160;dictionary.c'],['../dictionary_8h.html#a0cab592a6e685ec131df8b0a13572058',1,'palavra_prefix(DICIONARIO dic, char palavra[]):&#160;dictionary.c']]],
+  ['procurar_2ec',['procurar.c',['../procurar_8c.html',1,'']]],
+  ['procurar_5fprint',['procurar_print',['../procurar_8c.html#ae635dcbd40cdf9e1739f910644b830b7',1,'procurar.c']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['interpretador_2ec',['interpretador.c',['../interpretador_8c.html',1,'']]],
-  ['interpretador_2eh',['interpretador.h',['../interpretador_8h.html',1,'']]]
+  ['jogada_2ec',['jogada.c',['../jogada_8c.html',1,'']]],
+  ['jogada_2eh',['jogada.h',['../jogada_8h.html',1,'']]]
 ];

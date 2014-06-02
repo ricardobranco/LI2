@@ -1,0 +1,443 @@
+\hypertarget{cadeias_8h}{\section{code/cadeias.h File Reference}
+\label{cadeias_8h}\index{code/cadeias.\+h@{code/cadeias.\+h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{cadeias_8h_a09c4c1181accb699d2956e3256c18a5f}{cad\+\_\+tamanho} (char s\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função que diz o tamanho de uma string. \end{DoxyCompactList}\item 
+int \hyperlink{cadeias_8h_adf951f876515208c711f1378d1e68754}{cad\+\_\+procurar\+\_\+car} (char c, char s\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função que diz se um caracter existe numa string. \end{DoxyCompactList}\item 
+int \hyperlink{cadeias_8h_aab8ce8d8828807119398e78d950756fe}{cad\+\_\+ocorrencias} (char c, char s\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função que diz o número de ocorrências de um caracter numa string. \end{DoxyCompactList}\item 
+int \hyperlink{cadeias_8h_a0032babe983ee99153453fa4f2795b83}{cad\+\_\+procurar\+\_\+str} (char s1\mbox{[}$\,$\mbox{]}, char s2\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função que diz se uma string é substring de outra string. \end{DoxyCompactList}\item 
+int \hyperlink{cadeias_8h_a81294f673d03eed9dfb53ab39e2d5968}{cad\+\_\+e\+\_\+prefixo} (char s1\mbox{[}$\,$\mbox{]}, char s2\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função que diz se uma string é prefixo de outra string. \end{DoxyCompactList}\item 
+int \hyperlink{cadeias_8h_a8c5f21fb1bc8294bd4a9c0d12c6a9b5d}{cad\+\_\+e\+\_\+sufixo} (char s1\mbox{[}$\,$\mbox{]}, char s2\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função que diz se uma string é sufixo de outra string. \end{DoxyCompactList}\item 
+int \hyperlink{cadeias_8h_a498effcd6b0ba8445a97b1352bace9e5}{cad\+\_\+iguais} (char s1\mbox{[}$\,$\mbox{]}, char s2\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função que diz se uma string é igual outra string. \end{DoxyCompactList}\item 
+int \hyperlink{cadeias_8h_a81826694c766f6c87feb8b455958ffb7}{cad\+\_\+primeiro} (char s1\mbox{[}$\,$\mbox{]}, char s2\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função que diz se uma string é menor do que outra string. \end{DoxyCompactList}\item 
+int \hyperlink{cadeias_8h_aa9cafc60c520112262072aa57a1f2474}{cad\+\_\+comparar} (char s1\mbox{[}$\,$\mbox{]}, char s2\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função que compara duas strings (segundo a ordem lexicográfica) \end{DoxyCompactList}\item 
+int \hyperlink{cadeias_8h_a255672352007389f105a6aa511d9d9cd}{cad\+\_\+um\+\_\+dos} (char s1\mbox{[}$\,$\mbox{]}, char s2\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função que procura o primeiro índice numa string que contém um dos caracteres de outra string. \end{DoxyCompactList}\item 
+int \hyperlink{cadeias_8h_ad5ca26d9dcfe9199b59760cf64db8780}{cad\+\_\+nenhum\+\_\+dos} (char s1\mbox{[}$\,$\mbox{]}, char s2\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função que procura o primeiro índice numa string que não contém um dos caracteres de outra string. \end{DoxyCompactList}\item 
+int \hyperlink{cadeias_8h_a1cf93f51265605b369ef1ce6e90cf046}{cad\+\_\+copiar} (char s1\mbox{[}$\,$\mbox{]}, char s2\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função que copia uma string para outra. \end{DoxyCompactList}\item 
+int \hyperlink{cadeias_8h_af81e571fe1420f8bdadaac9686e74a09}{cad\+\_\+colar} (char s1\mbox{[}$\,$\mbox{]}, char s2\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função que adiciona ao fim de uma string outra string. \end{DoxyCompactList}\item 
+int \hyperlink{cadeias_8h_a59a2b4a4957c54a4fcb4c9243c914839}{cad\+\_\+mover} (char m1\mbox{[}$\,$\mbox{]}, char m2\mbox{[}$\,$\mbox{]}, int n)
+\begin{DoxyCompactList}\small\item\em Função que move n bytes de uma string para outra string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{cadeias_8h_af81e571fe1420f8bdadaac9686e74a09}{\index{cadeias.\+h@{cadeias.\+h}!cad\+\_\+colar@{cad\+\_\+colar}}
+\index{cad\+\_\+colar@{cad\+\_\+colar}!cadeias.\+h@{cadeias.\+h}}
+\subsubsection[{cad\+\_\+colar}]{\setlength{\rightskip}{0pt plus 5cm}int cad\+\_\+colar (
+\begin{DoxyParamCaption}
+\item[{char}]{s1\mbox{[}$\,$\mbox{]}, }
+\item[{char}]{s2\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{cadeias_8h_af81e571fe1420f8bdadaac9686e74a09}
+
+
+Função que adiciona ao fim de uma string outra string. 
+
+Função que adiciona ao fim de uma string outra string. Equivalente ao strcat do string.\+h 
+\begin{DoxyParams}{Parameters}
+{\em s1} & String a ser acrescentada por s2 \\
+\hline
+{\em s2} & String que será adicionada a s1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inteiro com o tamanha da nova string 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniel Araújo 
+
+Pedro Duarte 
+
+Ricardo Branco 
+\end{DoxyAuthor}
+\hypertarget{cadeias_8h_aa9cafc60c520112262072aa57a1f2474}{\index{cadeias.\+h@{cadeias.\+h}!cad\+\_\+comparar@{cad\+\_\+comparar}}
+\index{cad\+\_\+comparar@{cad\+\_\+comparar}!cadeias.\+h@{cadeias.\+h}}
+\subsubsection[{cad\+\_\+comparar}]{\setlength{\rightskip}{0pt plus 5cm}int cad\+\_\+comparar (
+\begin{DoxyParamCaption}
+\item[{char}]{s1\mbox{[}$\,$\mbox{]}, }
+\item[{char}]{s2\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{cadeias_8h_aa9cafc60c520112262072aa57a1f2474}
+
+
+Função que compara duas strings (segundo a ordem lexicográfica) 
+
+Função que compara duas strings. Equivalente ao strcmp do string.\+h 
+\begin{DoxyParams}{Parameters}
+{\em s1} & String para comparação 1 \\
+\hline
+{\em s2} & String para comparação 2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inteiro com o resultado da comparação (-\/1 se s1$<$s2; 0 se s1=s2; 1 se s1$>$s2) 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniel Araújo 
+
+Pedro Duarte 
+
+Ricardo Branco 
+\end{DoxyAuthor}
+\hypertarget{cadeias_8h_a1cf93f51265605b369ef1ce6e90cf046}{\index{cadeias.\+h@{cadeias.\+h}!cad\+\_\+copiar@{cad\+\_\+copiar}}
+\index{cad\+\_\+copiar@{cad\+\_\+copiar}!cadeias.\+h@{cadeias.\+h}}
+\subsubsection[{cad\+\_\+copiar}]{\setlength{\rightskip}{0pt plus 5cm}int cad\+\_\+copiar (
+\begin{DoxyParamCaption}
+\item[{char}]{s1\mbox{[}$\,$\mbox{]}, }
+\item[{char}]{s2\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{cadeias_8h_a1cf93f51265605b369ef1ce6e90cf046}
+
+
+Função que copia uma string para outra. 
+
+Função que copia uma string para outra. Equivalente ao strcpy do string.\+h 
+\begin{DoxyParams}{Parameters}
+{\em s1} & String atribuição para rebeber a cópia. \\
+\hline
+{\em s2} & String que será copiada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inteiro com confirmação de sucesso. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniel Araújo 
+
+Pedro Duarte 
+
+Ricardo Branco 
+\end{DoxyAuthor}
+\hypertarget{cadeias_8h_a81294f673d03eed9dfb53ab39e2d5968}{\index{cadeias.\+h@{cadeias.\+h}!cad\+\_\+e\+\_\+prefixo@{cad\+\_\+e\+\_\+prefixo}}
+\index{cad\+\_\+e\+\_\+prefixo@{cad\+\_\+e\+\_\+prefixo}!cadeias.\+h@{cadeias.\+h}}
+\subsubsection[{cad\+\_\+e\+\_\+prefixo}]{\setlength{\rightskip}{0pt plus 5cm}int cad\+\_\+e\+\_\+prefixo (
+\begin{DoxyParamCaption}
+\item[{char}]{s1\mbox{[}$\,$\mbox{]}, }
+\item[{char}]{s2\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{cadeias_8h_a81294f673d03eed9dfb53ab39e2d5968}
+
+
+Função que diz se uma string é prefixo de outra string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & String a verificar sendo prefixo \\
+\hline
+{\em s2} & String que deverá conter a string s1 como prefixo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inteiro como booleano da verificação (0 falso, 1 verdadeiro) 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniel Araújo 
+
+Pedro Duarte 
+
+Ricardo Branco 
+\end{DoxyAuthor}
+\hypertarget{cadeias_8h_a8c5f21fb1bc8294bd4a9c0d12c6a9b5d}{\index{cadeias.\+h@{cadeias.\+h}!cad\+\_\+e\+\_\+sufixo@{cad\+\_\+e\+\_\+sufixo}}
+\index{cad\+\_\+e\+\_\+sufixo@{cad\+\_\+e\+\_\+sufixo}!cadeias.\+h@{cadeias.\+h}}
+\subsubsection[{cad\+\_\+e\+\_\+sufixo}]{\setlength{\rightskip}{0pt plus 5cm}int cad\+\_\+e\+\_\+sufixo (
+\begin{DoxyParamCaption}
+\item[{char}]{s1\mbox{[}$\,$\mbox{]}, }
+\item[{char}]{s2\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{cadeias_8h_a8c5f21fb1bc8294bd4a9c0d12c6a9b5d}
+
+
+Função que diz se uma string é sufixo de outra string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & String a verificar sendo prefixo \\
+\hline
+{\em s2} & String que deverá conter a string s1 como sufixo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inteiro como booleano da verificação (0 falso, 1 verdadeiro) 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniel Araújo 
+
+Pedro Duarte 
+
+Ricardo Branco 
+\end{DoxyAuthor}
+\hypertarget{cadeias_8h_a498effcd6b0ba8445a97b1352bace9e5}{\index{cadeias.\+h@{cadeias.\+h}!cad\+\_\+iguais@{cad\+\_\+iguais}}
+\index{cad\+\_\+iguais@{cad\+\_\+iguais}!cadeias.\+h@{cadeias.\+h}}
+\subsubsection[{cad\+\_\+iguais}]{\setlength{\rightskip}{0pt plus 5cm}int cad\+\_\+iguais (
+\begin{DoxyParamCaption}
+\item[{char}]{s1\mbox{[}$\,$\mbox{]}, }
+\item[{char}]{s2\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{cadeias_8h_a498effcd6b0ba8445a97b1352bace9e5}
+
+
+Função que diz se uma string é igual outra string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & String a comparar com s2 \\
+\hline
+{\em s2} & String a comparar com s1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inteiro como booleano da verificação (0 falso, 1 verdadeiro) 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniel Araújo 
+
+Pedro Duarte 
+
+Ricardo Branco 
+\end{DoxyAuthor}
+\hypertarget{cadeias_8h_a59a2b4a4957c54a4fcb4c9243c914839}{\index{cadeias.\+h@{cadeias.\+h}!cad\+\_\+mover@{cad\+\_\+mover}}
+\index{cad\+\_\+mover@{cad\+\_\+mover}!cadeias.\+h@{cadeias.\+h}}
+\subsubsection[{cad\+\_\+mover}]{\setlength{\rightskip}{0pt plus 5cm}int cad\+\_\+mover (
+\begin{DoxyParamCaption}
+\item[{char}]{m1\mbox{[}$\,$\mbox{]}, }
+\item[{char}]{m2\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{cadeias_8h_a59a2b4a4957c54a4fcb4c9243c914839}
+
+
+Função que move n bytes de uma string para outra string. 
+
+Função que move n bytes de uma string para outra string. Equivalente ao strncat do string.\+h 
+\begin{DoxyParams}{Parameters}
+{\em m1} & String a ser acrescentada \\
+\hline
+{\em m2} & String a ser criada \\
+\hline
+{\em n} & número de caracteres a serem movidos a partir de m1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inteiro que retorna o sucesso da operação 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniel Araújo 
+
+Pedro Duarte 
+
+Ricardo Branco 
+\end{DoxyAuthor}
+\hypertarget{cadeias_8h_ad5ca26d9dcfe9199b59760cf64db8780}{\index{cadeias.\+h@{cadeias.\+h}!cad\+\_\+nenhum\+\_\+dos@{cad\+\_\+nenhum\+\_\+dos}}
+\index{cad\+\_\+nenhum\+\_\+dos@{cad\+\_\+nenhum\+\_\+dos}!cadeias.\+h@{cadeias.\+h}}
+\subsubsection[{cad\+\_\+nenhum\+\_\+dos}]{\setlength{\rightskip}{0pt plus 5cm}int cad\+\_\+nenhum\+\_\+dos (
+\begin{DoxyParamCaption}
+\item[{char}]{s1\mbox{[}$\,$\mbox{]}, }
+\item[{char}]{s2\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{cadeias_8h_ad5ca26d9dcfe9199b59760cf64db8780}
+
+
+Função que procura o primeiro índice numa string que não contém um dos caracteres de outra string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & String que conterá (ou não) um dos caracteres da string s2 \\
+\hline
+{\em s2} & String que contém os caracteres de comparação. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inteiro a posição em s1 do primeiro caracter não comum na string s2 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniel Araújo 
+
+Pedro Duarte 
+
+Ricardo Branco 
+\end{DoxyAuthor}
+\hypertarget{cadeias_8h_aab8ce8d8828807119398e78d950756fe}{\index{cadeias.\+h@{cadeias.\+h}!cad\+\_\+ocorrencias@{cad\+\_\+ocorrencias}}
+\index{cad\+\_\+ocorrencias@{cad\+\_\+ocorrencias}!cadeias.\+h@{cadeias.\+h}}
+\subsubsection[{cad\+\_\+ocorrencias}]{\setlength{\rightskip}{0pt plus 5cm}int cad\+\_\+ocorrencias (
+\begin{DoxyParamCaption}
+\item[{char}]{c, }
+\item[{char}]{s\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{cadeias_8h_aab8ce8d8828807119398e78d950756fe}
+
+
+Função que diz o número de ocorrências de um caracter numa string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Caracter a encontrar \\
+\hline
+{\em s} & String que deverá ter o caracter c \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inteiro com o numéro de ocorrências de c em s 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniel Araújo 
+
+Pedro Duarte 
+
+Ricardo Branco 
+\end{DoxyAuthor}
+\hypertarget{cadeias_8h_a81826694c766f6c87feb8b455958ffb7}{\index{cadeias.\+h@{cadeias.\+h}!cad\+\_\+primeiro@{cad\+\_\+primeiro}}
+\index{cad\+\_\+primeiro@{cad\+\_\+primeiro}!cadeias.\+h@{cadeias.\+h}}
+\subsubsection[{cad\+\_\+primeiro}]{\setlength{\rightskip}{0pt plus 5cm}int cad\+\_\+primeiro (
+\begin{DoxyParamCaption}
+\item[{char}]{s1\mbox{[}$\,$\mbox{]}, }
+\item[{char}]{s2\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{cadeias_8h_a81826694c766f6c87feb8b455958ffb7}
+
+
+Função que diz se uma string é menor do que outra string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & String que se verificará se é menor \\
+\hline
+{\em s2} & String usada para comparação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inteiro como booleano da verificação (0 falso, 1 verdadeiro) 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniel Araújo 
+
+Pedro Duarte 
+
+Ricardo Branco 
+\end{DoxyAuthor}
+\hypertarget{cadeias_8h_adf951f876515208c711f1378d1e68754}{\index{cadeias.\+h@{cadeias.\+h}!cad\+\_\+procurar\+\_\+car@{cad\+\_\+procurar\+\_\+car}}
+\index{cad\+\_\+procurar\+\_\+car@{cad\+\_\+procurar\+\_\+car}!cadeias.\+h@{cadeias.\+h}}
+\subsubsection[{cad\+\_\+procurar\+\_\+car}]{\setlength{\rightskip}{0pt plus 5cm}int cad\+\_\+procurar\+\_\+car (
+\begin{DoxyParamCaption}
+\item[{char}]{c, }
+\item[{char}]{s\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{cadeias_8h_adf951f876515208c711f1378d1e68754}
+
+
+Função que diz se um caracter existe numa string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Caracter a encontrar \\
+\hline
+{\em s} & String que deverá ter o caracter c \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inteiro com o indice da primeira ocorrência de c em s 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniel Araújo 
+
+Pedro Duarte 
+
+Ricardo Branco 
+\end{DoxyAuthor}
+\hypertarget{cadeias_8h_a0032babe983ee99153453fa4f2795b83}{\index{cadeias.\+h@{cadeias.\+h}!cad\+\_\+procurar\+\_\+str@{cad\+\_\+procurar\+\_\+str}}
+\index{cad\+\_\+procurar\+\_\+str@{cad\+\_\+procurar\+\_\+str}!cadeias.\+h@{cadeias.\+h}}
+\subsubsection[{cad\+\_\+procurar\+\_\+str}]{\setlength{\rightskip}{0pt plus 5cm}int cad\+\_\+procurar\+\_\+str (
+\begin{DoxyParamCaption}
+\item[{char}]{s1\mbox{[}$\,$\mbox{]}, }
+\item[{char}]{s2\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{cadeias_8h_a0032babe983ee99153453fa4f2795b83}
+
+
+Função que diz se uma string é substring de outra string. 
+
+Função que diz se uma string é substring de outra string. Equivalente ao strstr do string.\+h 
+\begin{DoxyParams}{Parameters}
+{\em c} & Caracter a encontrar \\
+\hline
+{\em s} & String que deverá ter o caracter c \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inteiro com o numéro de ocorrências de c em s 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniel Araújo 
+
+Pedro Duarte 
+
+Ricardo Branco 
+\end{DoxyAuthor}
+\hypertarget{cadeias_8h_a09c4c1181accb699d2956e3256c18a5f}{\index{cadeias.\+h@{cadeias.\+h}!cad\+\_\+tamanho@{cad\+\_\+tamanho}}
+\index{cad\+\_\+tamanho@{cad\+\_\+tamanho}!cadeias.\+h@{cadeias.\+h}}
+\subsubsection[{cad\+\_\+tamanho}]{\setlength{\rightskip}{0pt plus 5cm}int cad\+\_\+tamanho (
+\begin{DoxyParamCaption}
+\item[{char}]{s\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{cadeias_8h_a09c4c1181accb699d2956e3256c18a5f}
+
+
+Função que diz o tamanho de uma string. 
+
+Função que diz o tamanho de uma string. Equivalente ao strlen do string.\+h 
+\begin{DoxyParams}{Parameters}
+{\em s} & String que se pretender medir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tamanho da String 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniel Araújo 
+
+Pedro Duarte 
+
+Ricardo Branco 
+\end{DoxyAuthor}
+\hypertarget{cadeias_8h_a255672352007389f105a6aa511d9d9cd}{\index{cadeias.\+h@{cadeias.\+h}!cad\+\_\+um\+\_\+dos@{cad\+\_\+um\+\_\+dos}}
+\index{cad\+\_\+um\+\_\+dos@{cad\+\_\+um\+\_\+dos}!cadeias.\+h@{cadeias.\+h}}
+\subsubsection[{cad\+\_\+um\+\_\+dos}]{\setlength{\rightskip}{0pt plus 5cm}int cad\+\_\+um\+\_\+dos (
+\begin{DoxyParamCaption}
+\item[{char}]{s1\mbox{[}$\,$\mbox{]}, }
+\item[{char}]{s2\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{cadeias_8h_a255672352007389f105a6aa511d9d9cd}
+
+
+Função que procura o primeiro índice numa string que contém um dos caracteres de outra string. 
+
+Função que procura o primeiro índice numa string que contém um dos caracteres de outra string. Equivalente ao strpbrk do string.\+h 
+\begin{DoxyParams}{Parameters}
+{\em s1} & String que conterá (ou não) um dos caracteres da string s2 \\
+\hline
+{\em s2} & String que contém os caracteres de comparação. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inteiro a posição em s1 do primeiro caracter comum na string s2 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniel Araújo 
+
+Pedro Duarte 
+
+Ricardo Branco 
+\end{DoxyAuthor}

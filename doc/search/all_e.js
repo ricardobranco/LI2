@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['value',['value',['../structstruct__node.html#a1de5cca0fbfc376f5a6997b84006e25e',1,'struct_node::value()'],['../structstruct__tree.html#a4e9aec275e566b978a3ccb4e043d8c61',1,'struct_tree::value()']]]
+  ['tdic_2ec',['tdic.c',['../tdic_8c.html',1,'']]],
+  ['tproc_2ec',['tproc.c',['../tproc_8c.html',1,'']]],
+  ['trie_5fnode',['trie_node',['../structtrie__node.html',1,'']]],
+  ['trienode',['TrieNode',['../dictionary_8h.html#a47ec1d70ec2a806865ab835255d31e2a',1,'dictionary.h']]]
 ];
