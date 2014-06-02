@@ -1,6 +1,6 @@
 CFLAGS=-g -Wall -Wextra -pedantic -ansi
-OBJS=cadeias.o board.o interpretador.o dictionary.o
-LIBS=-lreadline
+OBJS=cadeias.o board.o interpretador.o dictionary.o tree.o jogada.o
+LIBS=-lreadline -lncurses
 
 all: coords tproc tdic encontrar_todas procurar
 

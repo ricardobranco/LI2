@@ -18,7 +18,7 @@ int add_row(char* row,int pos,BOARD board){
 	return cad_tamanho(board->board[pos]);
 }
 
-void print(BOARD board){
+void board_print(BOARD board){
 	int i;
 	for(i = 0; i < board->nl; i++)
 		printf("%s\n",board->board[i]);

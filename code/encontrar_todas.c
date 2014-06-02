@@ -83,6 +83,7 @@ void encontrar_todas_cavalo(BOARD board,DICIONARIO dic, int x, int y, DICIONARIO
 			}
 		}
 	}
+	board->board[x][y] = old;
 }
 
 

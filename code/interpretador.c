@@ -9,4 +9,3 @@ char *rl_gets (char* prompt)
 
   return (line_read);
 }
-

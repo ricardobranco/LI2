@@ -54,7 +54,7 @@ int add_row(char* row,int pos,BOARD board);
  @author Pedro Duarte
  @author Ricardo Branco
  */
-void print(BOARD board);
+void board_print(BOARD board);
 
 /**
  @brief Função que carrega um tabuleiro a partir de um ficheiro
