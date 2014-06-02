@@ -3,7 +3,6 @@
 #include "interpretador.h"
 #include "board.h"
 #include "cadeias.h"
-#include "tree.h"
 #include "dictionary.h"
 
 void encontrar_todas_serpente(BOARD board,DICIONARIO dic, int x, int y, DICIONARIO res, char* prefix){

@@ -1,8 +1,8 @@
 CFLAGS=-g -Wall -Wextra -pedantic -ansi
-OBJS=cadeias.o board.o interpretador.o dictionary.o tree.o
+OBJS=cadeias.o board.o interpretador.o dictionary.o
 LIBS=-lreadline
 
-all: coords tproc tdic encontrar_todas procurar gerar_sopa
+all: coords tproc tdic encontrar_todas procurar
 
 encontrar_todas: encontrar_todas.o $(OBJS)
 	$(CC) $(CFLAGS) -o encontrar_todas encontrar_todas.o $(OBJS) $(LIBS)
@@ -33,12 +33,6 @@ procurar: procurar.o $(OBJS)
 
 procurar.o: procurar.c
 	$(CC) $(CFLAGS) -c procurar.c $(LIBS)
-
-gerar_sopa: gerar_sopa.o $(OBJS)
-	$(CC) $(CFLAGS) -o gerar_sopa gerar_sopa.o $(OBJS) $(LIBS)
-
-gerar_sopa.o: procurar.c
-	$(CC) $(CFLAGS) -c gerar_sopa.c $(LIBS)
 
 clean:
 	rm coords tproc tdic encontrar_todas procurar gerar_sopa *.o
