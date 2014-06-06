@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>Laboratórios de Informatica 2: code/encontrar_todas.c File Reference</title>
+<title>Laboratórios de Informática II: code/encontrar_todas.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Laboratórios de Informatica 2
+   <div id="projectname">Laboratórios de Informática II
    </div>
   </td>
  </tr>
@@ -99,10 +99,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:afc6fbe856b5c6b9c2628e4500d05a017"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="encontrar__todas_8c.html#afc6fbe856b5c6b9c2628e4500d05a017">encontrar_todas_serpente</a> (<a class="el" href="board_8h.html#adac52f1b8c160731cd455af114c53a59">BOARD</a> board, <a class="el" href="dictionary_8h.html#ab8e3f010c57289f16b599812c175fe81">DICIONARIO</a> dic, int x, int y, <a class="el" href="dictionary_8h.html#ab8e3f010c57289f16b599812c175fe81">DICIONARIO</a> res, char *prefix)</td></tr>
+<tr class="memdesc:afc6fbe856b5c6b9c2628e4500d05a017"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que encontra todas as palavras num tabuleiro de forma serpenteada.  <a href="#afc6fbe856b5c6b9c2628e4500d05a017">More...</a><br /></td></tr>
 <tr class="separator:afc6fbe856b5c6b9c2628e4500d05a017"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c7056bba86cffdf9c7faf1ae164e14b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="encontrar__todas_8c.html#a4c7056bba86cffdf9c7faf1ae164e14b">encontrar_todas_cavalo</a> (<a class="el" href="board_8h.html#adac52f1b8c160731cd455af114c53a59">BOARD</a> board, <a class="el" href="dictionary_8h.html#ab8e3f010c57289f16b599812c175fe81">DICIONARIO</a> dic, int x, int y, <a class="el" href="dictionary_8h.html#ab8e3f010c57289f16b599812c175fe81">DICIONARIO</a> res, char *prefix)</td></tr>
+<tr class="memdesc:a4c7056bba86cffdf9c7faf1ae164e14b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que encontra todas as palavras num tabuleiro atraves do salto de cavalo.  <a href="#a4c7056bba86cffdf9c7faf1ae164e14b">More...</a><br /></td></tr>
 <tr class="separator:a4c7056bba86cffdf9c7faf1ae164e14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a125deee0c6126c069711b716943b7a5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dictionary_8h.html#ab8e3f010c57289f16b599812c175fe81">DICIONARIO</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="encontrar__todas_8c.html#a125deee0c6126c069711b716943b7a5e">encontrar_todas</a> (<a class="el" href="board_8h.html#adac52f1b8c160731cd455af114c53a59">BOARD</a> board, <a class="el" href="dictionary_8h.html#ab8e3f010c57289f16b599812c175fe81">DICIONARIO</a> dic, char modo[])</td></tr>
+<tr class="memdesc:a125deee0c6126c069711b716943b7a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que encontra todas as palavras num tabuleiro.  <a href="#a125deee0c6126c069711b716943b7a5e">More...</a><br /></td></tr>
 <tr class="separator:a125deee0c6126c069711b716943b7a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="encontrar__todas_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,6 +140,22 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Função que encontra todas as palavras num tabuleiro. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">board</td><td>Tabuleiro onde se encontram as palavras 'escondidas' </td></tr>
+    <tr><td class="paramname">dic</td><td>Dicionario com todas as palavras da lingua portuguesa </td></tr>
+    <tr><td class="paramname">modo</td><td>String com o modo de procura (serpente ou cavalo) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Dicionario com todas as palavras encontradas </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Daniel Araújo </dd>
+<dd>
+Pedro Duarte </dd>
+<dd>
+Ricardo Branco </dd></dl>
 
 </div>
 </div>
@@ -188,6 +207,24 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Função que encontra todas as palavras num tabuleiro atraves do salto de cavalo. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">board</td><td>Tabuleiro onde se encontram as palavras 'escondidas' </td></tr>
+    <tr><td class="paramname">dic</td><td>Dicionario com todas as palavras da lingua portuguesa </td></tr>
+    <tr><td class="paramname">x</td><td>Inteiro referente a linha em que se começa a procura </td></tr>
+    <tr><td class="paramname">y</td><td>Inteiro referente a coluna em que se começa a procura </td></tr>
+    <tr><td class="paramname">res</td><td>Dicionario com as palavras encontradas até ao momento </td></tr>
+    <tr><td class="paramname">prefix</td><td>String com a string a construir </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Author</dt><dd>Daniel Araújo </dd>
+<dd>
+Pedro Duarte </dd>
+<dd>
+Ricardo Branco </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="afc6fbe856b5c6b9c2628e4500d05a017"></a>
@@ -238,6 +275,24 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Função que encontra todas as palavras num tabuleiro de forma serpenteada. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">board</td><td>Tabuleiro onde se encontram as palavras 'escondidas' </td></tr>
+    <tr><td class="paramname">dic</td><td>Dicionario com todas as palavras da lingua portuguesa </td></tr>
+    <tr><td class="paramname">x</td><td>Inteiro referente a linha em que se começa a procura </td></tr>
+    <tr><td class="paramname">y</td><td>Inteiro referente a coluna em que se começa a procura </td></tr>
+    <tr><td class="paramname">res</td><td>Dicionario com as palavras encontradas até ao momento </td></tr>
+    <tr><td class="paramname">prefix</td><td>String com a string a construir </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Author</dt><dd>Daniel Araújo </dd>
+<dd>
+Pedro Duarte </dd>
+<dd>
+Ricardo Branco </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
@@ -258,7 +313,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 2 2014 02:25:37 for Laboratórios de Informatica 2 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 6 2014 19:27:57 for Laboratórios de Informática II by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
